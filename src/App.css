@@ -1,9 +1,0 @@
-.wrap {
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-  width: 100%;
-  gap: 24px;
-  padding: 24px;
-  flex-wrap: wrap;
-}
