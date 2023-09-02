@@ -1,147 +1,5 @@
 @import url(../../colors.scss);
 
-.wrap {
-    display: flex;
-    // justify-content: space-between;
-    align-items: stretch;
-    width: 100%;
-    gap: 24px;
-    padding: 24px;
-    flex-wrap: wrap;
-}
-
-.custom-btn {
-    position: absolute;
-    left: 37%;
-    width: 130px;
-    height: 40px;
-    color: #fff;
-    border-radius: 5px;
-    padding: 10px 25px;
-    width: 25%;
-    font-family: 'Lato', sans-serif;
-    font-weight: 500;
-    background: transparent;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
-    display: inline-block;
-    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
-        7px 7px 20px 0px rgba(0, 0, 0, .1),
-        4px 4px 5px 0px rgba(0, 0, 0, .1);
-    outline: none;
-}
-
-/* 1 */
-.btn-1 {
-    background: rgb(6, 14, 131);
-    background: linear-gradient(0deg, rgba(6, 14, 131, 1) 0%, rgba(12, 25, 180, 1) 100%);
-    border: none;
-}
-
-.btn-1:hover {
-    background: rgb(0, 3, 255);
-    background: linear-gradient(0deg, rgba(0, 3, 255, 1) 0%, rgba(2, 126, 251, 1) 100%);
-}
-
-// .card {
-//     width: 100%;
-//     max-width: 500px;
-//     min-width: 250px;
-//     min-height: 350px;
-//     margin-bottom: 25px;
-//     align-self: center;
-//     transform-style: preserve-3d;
-//     transition: transform 0.5s;
-//     border: 1px solid #ccaa99;
-//     border-radius: 5px;
-//     background-color: white;
-//     color: #bb5555;
-//     card-shadow: 0 0 10px 1px #ffeedd;
-//     font-size: 1em;
-// }
-
-// .card__image {
-//     width: 350px;
-//     height: 250px;
-// }
-
-.card__btn_like {
-    position: relative;
-    width: 64px;
-    height: 60px;
-    margin-top: auto;
-    font-size: 16px;
-    border: none;
-    background-color: transparent;
-    // background-image: url("../../assets/images/like.svg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    color: #fff;
-    cursor: pointer;
-    // padding: 64px 64px;
-    // border: none;
-}
-
-.card__btn_like svg {
-    fill: #cd1b24;
-    transition: fill 0.3s;
-}
-
-.card__btn_like:hover svg {
-    // background-color: transparent;
-    fill: #ff2c36;
-}
-
-.card__btn_delete {
-    position: absolute;
-    background: url(../../assets/images/icons8-cancel-50.png);
-    background-size: cover;
-    // align-self: flex-end;
-    width: 35px;
-    height: 35px;
-    left: 100%;
-    top: -5.5%;
-    font-size: 20px;
-    // background: transparent;
-    border: none;
-    cursor: pointer;
-    // align-self: flex-end;
-}
-
-// .button {
-//     display: block;
-//     justify-content: center;
-//     align-items: center;
-//     text-align: center;
-//     margin-top: auto;
-//     // padding: 16px;
-//     color: #000;
-//     // background: transparent;
-//     box-shadow: 0px 0px 0px 1px black inset;
-//     transition: background 0.4s ease;
-// }
-
-// .button:hover {
-//     background: var(--purple);
-// }
-
-.card__btn_like::before {
-    content: "";
-    // background-color: rgba(0, 0, 0, 0.3);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 0.2s ease-in-out;
-}
-
-.card__btn_like:hover::before {
-    opacity: 1;
-}
-
 * {
     box-sizing: border-box;
     padding: 0;
@@ -161,24 +19,100 @@ p {
     color: var(--text-gray);
 }
 
-.description {
-    white-space: wrap;
-}
-
 a {
     text-decoration: none;
     color: inherit;
 }
 
-// .wrap {
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: stretch;
-//     width: 100%;
-//     gap: 24px;
-//     padding: 24px;
-//     flex-wrap: wrap;
-// }
+.wrap {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    gap: 24px;
+    padding: 24px;
+    flex-wrap: wrap;
+}
+
+.custom-btn {
+    position: relative;
+    width: 25%;
+    height: 40px;
+    margin-top: 24px;
+    left: 37%;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    outline: none;
+}
+
+.description {
+    white-space: wrap;
+}
+
+.btn {
+    background: rgb(6, 14, 131);
+    background: linear-gradient(0deg, rgba(6, 14, 131, 1) 0%, rgba(12, 25, 180, 1) 100%);
+    border: none;
+}
+
+.btn:hover {
+    background: rgb(0, 3, 255);
+    background: linear-gradient(0deg, rgba(0, 3, 255, 1) 0%, rgba(2, 126, 251, 1) 100%);
+}
+
+.card__btn_like {
+    position: relative;
+    width: 64px;
+    height: 60px;
+    margin-top: auto;
+    font-size: 16px;
+    border: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: #fff;
+    cursor: pointer;
+}
+
+.card__btn_like svg {
+    fill: #cd1b24;
+    transition: fill 0.3s;
+}
+
+.card__btn_like:hover svg {
+    fill: #ff2c36;
+}
+
+.card__btn_delete {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 100%;
+    top: -5.5%;
+    background: url(../../assets/images/icons8-cancel-50.png);
+    background-size: cover;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.card__btn_like::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
 
 .card {
     display: flex;
@@ -192,8 +126,8 @@ a {
 
 .card-top {
     display: flex;
-    flex-direction: column;
     position: relative;
+    flex-direction: column;
     gap: 12px;
     margin-bottom: 36px;
 }
@@ -216,21 +150,10 @@ a {
     padding-left: 12px;
 }
 
-.user-follow-info {
+.card__link {
     color: hsl(0, 0%, 60%);
 }
 
-
-
-.fill-one {
-    background: var(--light-bg);
-}
-
-.fill-two {
-    background: var(--pink);
-}
-
-/* RESPONSIVE QUERIES */
 
 @media (min-width: 320px) {
     .title-flex {
@@ -240,8 +163,13 @@ a {
         align-items: start;
     }
 
-    .user-follow-info {
+    .card__link {
         margin-top: 6px;
+    }
+
+    .custom-btn {
+        width: 90%;
+        left: 5%;
     }
 }
 
@@ -253,8 +181,13 @@ a {
         align-items: start;
     }
 
-    .user-follow-info {
+    .card__link {
         margin-top: 6px;
+    }
+
+    .custom-btn {
+        width: 65%;
+        left: 17%;
     }
 }
 
@@ -270,8 +203,13 @@ a {
         align-items: start;
     }
 
-    .user-follow-info {
+    .card__link {
         margin-top: 6px;
+    }
+
+    .custom-btn {
+        width: 50%;
+        left: 25%;
     }
 }
 
@@ -283,8 +221,13 @@ a {
         align-items: start;
     }
 
-    .user-follow-info {
+    .card__link {
         margin-top: 6px;
+    }
+
+    .custom-btn {
+        width: 35%;
+        left: 33%;
     }
 }
 
@@ -300,13 +243,23 @@ a {
         align-items: start;
     }
 
-    .user-follow-info {
+    .card__link {
         margin-top: 6px;
+    }
+
+    .custom-btn {
+        width: 34%;
+        left: 33%;
     }
 }
 
 @media (min-width: 1100px) {
     .card {
         flex-basis: calc(25% - 18px);
+    }
+
+    .custom-btn {
+        left: 37%;
+        width: 25%;
     }
 }

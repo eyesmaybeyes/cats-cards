@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchData } from '../../reducers/dataActions';
 import './Card.scss';
@@ -7,19 +7,16 @@ function Card() {
 
     const dispatch = useDispatch();
     const catData = useSelector(state => state.data.data);
-    const error = useSelector(state => state.data.error);
-    const loading = useSelector(state => state.data.loading);
 
     const [liked, setLiked] = useState({});
     const [showLiked, setShowLiked] = useState(false);
 
-    const handleDeleteClick = (index) => {
-        const newCatData = [...catData];
-        newCatData.splice(index, 1);
+    const handleDeleteClick = (id) => {
+        const newCatData = catData.filter(cat => cat.id !== id);;
         dispatch({ type: "DELETE_CARD", payload: newCatData });
 
         const newLikedState = { ...liked };
-        delete newLikedState[index];
+        delete newLikedState[id];
         setLiked(newLikedState);
     };
 
@@ -33,7 +30,7 @@ function Card() {
 
     return (
         <>
-            <button className="custom-btn btn-1" onClick={() => setShowLiked(!showLiked)}>
+            <button className="custom-btn btn" onClick={() => setShowLiked(!showLiked)}>
                 {showLiked ? "Показать все карточки" : "Показать лайкнутые карточки"}
             </button>
             <div className="wrap">
@@ -43,11 +40,11 @@ function Card() {
                         .map((cat, index) =>
                             <div className="card" key={cat.id}>
                                 <div className="card-top">
-                                    <button className="card__btn_delete" onClick={() => handleDeleteClick(index)}></button>
+                                    <button className="card__btn_delete" onClick={() => handleDeleteClick(cat.id)}></button>
                                     <img className="card__image" src={cat.imageUrl} alt={cat.name} />
                                     <div className="title-flex">
                                         <h3 className="card__title">{cat.name}</h3>
-                                        <a href={cat.wikipedia_url} className="user-follow-info">wikipedia</a>
+                                        <a href={cat.wikipedia_url} className="card__link">wikipedia</a>
                                     </div>
                                     <p className="card__temperament">{cat.temperament}</p>
                                     <p className="card__description">{cat.description}</p>
