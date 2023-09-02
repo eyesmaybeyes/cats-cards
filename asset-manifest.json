@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/cats-cards/static/css/main.e84760a2.css",
+    "main.js": "/cats-cards/static/js/main.153a80d5.js",
+    "static/js/787.2db9ff15.chunk.js": "/cats-cards/static/js/787.2db9ff15.chunk.js",
+    "index.html": "/cats-cards/index.html",
+    "main.e84760a2.css.map": "/cats-cards/static/css/main.e84760a2.css.map",
+    "main.153a80d5.js.map": "/cats-cards/static/js/main.153a80d5.js.map",
+    "787.2db9ff15.chunk.js.map": "/cats-cards/static/js/787.2db9ff15.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e84760a2.css",
+    "static/js/main.153a80d5.js"
+  ]
+}
